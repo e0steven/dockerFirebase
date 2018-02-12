@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="manifest" href="manifest.json">
+    <!-- Older Chrome configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Notes">
+    <link rel="icon" sizes="192x192" href="bower_components/note-app/common/images/icon-4x.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <title>Parlay</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="bower_components/web-animations-js/web-animations.min.js"></script>
+    <link rel="import" href="note-app.html">
+  </head>
+  <body>
+    <platinum-sw-register
+      auto-register
+      skip-waiting
+      clients-claim
+      reload-on-install
+      href="sw-import.js">
+      <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
+    </platinum-sw-register>
+    <firebase-app
+      name="notes"
+      api-key="AIzaSyA_Xwyh6s9HHmfY0kZis-FOtBUa7Is7efg"
+      auth-domain="parlaychallenge.firebaseapp.com"
+      database-url="https://parlaychallenge.firebaseio.com">
+    </firebase-app>
+    <note-app></note-app>
+  </body>
+</html>

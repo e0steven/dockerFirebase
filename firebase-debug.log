@@ -1,0 +1,73 @@
+[debug] [2018-01-06T16:12:33.673Z] ----------------------------------------------------------------------
+[debug] [2018-01-06T16:12:33.679Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\e0steven\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-06T16:12:33.679Z] CLI Version:   3.16.0
+[debug] [2018-01-06T16:12:33.679Z] Platform:      win32
+[debug] [2018-01-06T16:12:33.679Z] Node Version:  v8.9.1
+[debug] [2018-01-06T16:12:33.681Z] Time:          Sat Jan 06 2018 11:12:33 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-06T16:12:33.681Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-06T16:12:33.710Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-06T16:12:33.711Z] > authorizing via signed-in user
+[debug] [2018-01-06T16:12:33.716Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parlaychallenge  
+  
+ Sat Jan 06 2018 11:12:33 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-06T16:12:34.163Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-06T16:12:34.166Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/parlaychallenge/tokens  
+  
+ Sat Jan 06 2018 11:12:34 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-06T16:12:34.530Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\e0steven\parlay'...
+[info] 
+[debug] [2018-01-06T16:12:34.540Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parlaychallenge  
+  
+ Sat Jan 06 2018 11:12:34 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-06T16:12:34.860Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-06T16:12:34.864Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/176171153543/clients/_:getWebAppConfig  
+  
+ Sat Jan 06 2018 11:12:34 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-06T16:12:35.286Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-02-12T02:51:36.325Z] ----------------------------------------------------------------------
+[debug] [2018-02-12T02:51:36.326Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\e0steven\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-12T02:51:36.326Z] CLI Version:   3.16.0
+[debug] [2018-02-12T02:51:36.326Z] Platform:      win32
+[debug] [2018-02-12T02:51:36.326Z] Node Version:  v8.9.1
+[debug] [2018-02-12T02:51:36.327Z] Time:          Sun Feb 11 2018 21:51:36 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:36.327Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-12T02:51:36.342Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-12T02:51:36.342Z] > authorizing via signed-in user
+[debug] [2018-02-12T02:51:36.343Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-12T02:51:36.344Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/S_t5jKNMB3ozBaGH9MU-UPCFgPCEQvGCpLvxtBx-ZP4Doys4vHf_ZiLVQZR-zIJI',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Feb 11 2018 21:51:36 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:36.610Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T02:51:36.614Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parlaychallenge  
+  
+ Sun Feb 11 2018 21:51:36 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:36.993Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T02:51:36.994Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/parlaychallenge/tokens  
+  
+ Sun Feb 11 2018 21:51:36 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:38.065Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\e0steven\parlay'...
+[info] 
+[debug] [2018-02-12T02:51:38.067Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parlaychallenge  
+  
+ Sun Feb 11 2018 21:51:38 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:38.440Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T02:51:38.441Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/176171153543/clients/_:getWebAppConfig  
+  
+ Sun Feb 11 2018 21:51:38 GMT-0500 (Eastern Standard Time)
+[debug] [2018-02-12T02:51:38.846Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

@@ -1,0 +1,95 @@
+<link rel="import" href="../polymerfire/firebase-auth.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-input/paper-input.html">
+
+<dom-module id="auth-element">
+  <template>
+    <style>
+      :host {
+        position: absolute;
+        top: 46px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--paper-blue-500);
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1;
+        color: var(--paper-blue-50);
+
+        /* Label and underline color when the input is not focused */
+       --paper-input-container-color: white;
+
+       /* Label and underline color when the input is focused */
+       --paper-input-container-focus-color: blue;
+
+       /* Label and underline color when the input is invalid */
+       --paper-input-container-invalid-color: red;
+
+       /* Input foreground color */
+       --paper-input-container-input-color: white;
+
+        @apply --layout;
+        @apply --layout-center-center;
+      }
+
+      :host([signed-in]) {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      paper-button > * {
+        vertical-align: middle;
+        text-transform: none;
+      }
+      paper-input {
+        color: white;
+      }
+    </style>
+
+
+    <firebase-auth id="authd" user="{{user}}" app-name="notes">
+    </firebase-auth>
+
+    <div>
+      <paper-input type="text" value="{{email::input}}" label="Email"></paper-input>
+      <paper-input type="password" value="{{passw::input}}" label="Password"></paper-input>
+      <paper-button on-tap="login" disabled$="[[attemptingSomething]]">login</paper-button>
+      <paper-button on-tap="createAccount" disabled$="[[attemptingSomething]]">create account</paper-button>
+    </div>
+
+    <div>
+      <span>[[message]]</span>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'auth-element',
+      properties: {
+        user: {
+          type: Object,
+          value: null,
+          notify: true
+        }
+      },
+      createAccount() {
+        this.message = "";
+        this.$.authd.createUserWithEmailAndPassword(this.email, this.passw).catch((err) => {
+          this.message = err.message;
+          this.passw = "";
+        });
+      },
+      login() {
+        this.message = "";
+        this.$.authd.signInWithEmailAndPassword(this.email, this.passw).catch((err) => {
+          this.message = err.message;
+          this.passw = "";
+        });
+      },
+      signOut() {
+        this.$.authd.signOut();
+      }
+    });
+  </script>
+</dom-module>
